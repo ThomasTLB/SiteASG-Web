@@ -1,4 +1,13 @@
 <section class="page-section clearfix">
+<div class="pageactue" style="  text-align: center;border: solid 0px;width: 65%;height:650px;background-color: #D6EAF8; margin-left: auto;margin-right: auto;">
+                            <br/>
+                            <h2>
+                                Actualités
+                            </h2>
+                            <br/>
+                            <br/>
+                                <iframe id="actue" src="actu.php" style=" border: solid 4px;width: 75%;height:425px;margin-left: auto; margin-right: auto;"></iframe>
+                        </div>
             <div class="container">
                 <div class="intro">
                     <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />

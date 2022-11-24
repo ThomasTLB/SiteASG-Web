@@ -84,4 +84,11 @@ function recupdesinscrits($chaineconnexion)
 	}
 	echo "<table/>";
 }
+// fonction de récupération des actualité
+function recupactu($chaineconnexion)
+{
+	$requeteselect="SELECT titre_actu, date_actu, contenue_actu, mots_clé, img_actu FROM actualités";
+	$resultatselect=mysqli_query($chaineconnexion, $requeteselect);
+	return $resultatselect;
+}
 ?>
