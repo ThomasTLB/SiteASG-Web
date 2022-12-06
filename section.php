@@ -39,7 +39,11 @@ case "créerInscriptionOk" : include_once("FormInscription_ok.php");
 					break;
 case "gestionAdmin" : include_once("admin.php");
 					break;
-default : include_once("accueuil.php");
+case "creerActu" : include_once("creerActu.php");
+					break;
+case "suppActu" : include_once("suppActu.php");
+					break;
+default : include_once("accueil.php");
 					break;
 }
 ?>

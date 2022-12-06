@@ -8,6 +8,14 @@ function connexionbdd()
 	return $chaineconnexion;
 }
 
+// fonction de récupération des actualité
+function insertionActu($titre, $dateActu, $contenue, $mot_clé, $file, $extension, $chaineconnexion)
+{
+	$requeteselect="INSERT into actualités (titre_actu, date_actu, contenue_actu, mots_clé, img_actu, extension_img) VALUES(\"$titre\", \"$dateActu\", \"$contenue\", \"$mot_clé\", \"$file\", \"$extension\")";
+	$resultatselect=mysqli_query($chaineconnexion, $requeteselect);
+	return $resultatselect;
+}
+
 function insertioninscrit($nom, $prenom, $login, $mdp, $cp, $age, $ddn, $telephone, $mail, $chaineconnexion)
 {	// preparation de la requête
 	$requeteinsertion="insert into collaborateur(nom_collaborateur, prenom_collaborateur, login_collaborateur, mdp_collaborateur, cp_collaborateur, age_collaborateur, ddn_collaborateur, telephone_collaborateur, mail_collaborateur, role_collaborateur) values (\"$nom\", \"$prenom\", \"$login\", \"$mdp\", \"$cp\", \"$age\", \"$ddn\", \"$telephone\", \"$mail\", \"visiteur\")";
@@ -90,5 +98,12 @@ function recupactu($chaineconnexion)
 	$requeteselect="SELECT titre_actu, date_actu, contenue_actu, mots_clé, img_actu FROM actualités";
 	$resultatselect=mysqli_query($chaineconnexion, $requeteselect);
 	return $resultatselect;
+}
+// fonction de suppression des actualiter
+function suppActu($actualiteChoisi, $chaineconnexion)
+{
+	$requetedelete="DELETE FROM 'actualités' WHERE 'id'=\"".$actualiteChoisi."\"";
+	$resultatdelete=mysqli_query($chaineconnexion, $requetedelete);
+	return $resultatdelete;
 }
 ?>

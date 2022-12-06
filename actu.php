@@ -15,7 +15,7 @@ $chaineconnexion=connexionbdd();
 $exec = recupactu($chaineconnexion);
 while($ligne=mysqli_fetch_array($exec))
 {
-    echo "<option> Titre : $ligne[titre_actu], Date de publication : $ligne[date_actu], Description : $ligne[contenu_actu], </br> Mots clés : $ligne[mots_clé], Image : $ligne[img_actu]";
+    echo "<option> Titre : $ligne[titre_actu], Date de publication : $ligne[date_actu], Description : $ligne[contenue_actu], </br> Mots clés : $ligne[mots_clé], Image : '<img src='./assets/img/".$ligne['img_actu']." width ='300px'></br></option>";
 }
 ?>
 </body>
