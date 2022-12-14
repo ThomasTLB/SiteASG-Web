@@ -31,7 +31,7 @@ include_once("BDDASG.php");
                         {
                             echo "Une erreur est survenue";
                         }
-                        if ($resultatinsertion> 0)
+                        if ($resultatinsertion>=1)
    		                {   
                             echo  "L'actualité a été ajouter";
                             echo"<meta http-equiv='refresh' content='5; URL=index.php?id=gestionAdmin'>";

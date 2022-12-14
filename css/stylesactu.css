@@ -1,0 +1,24 @@
+body
+{
+	background-color: #D6EAF8;
+}
+h1
+{
+	text-align: center;
+}
+img
+{
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ladate
+{
+	text-align: right;
+}
+
+.tablecontenue
+{
+	padding-left: 10%;
+
+}

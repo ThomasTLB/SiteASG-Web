@@ -25,7 +25,7 @@ include_once("BDDASG.php");
 	                        $resultatinsertion= insertioncontrat($dateEffet, $typeContrat, $dejaClient, $dejaExclus, $motifDepart, $montantMaxAssurer, $degreAssurance, $MarqueVoiture, $villeDomicile, $titulaireContrat, $collaborateurSuivi, $chaineconnexion);
 	                        // pour afficher ce que la reqiête transmet a Mysql : echo "requete: ".$resultatinsertion
 	                        // Si la requete est passé on prévient le client
-	                        if ($resultatinsertion>0)
+	                        if ($resultatinsertion>=1)
 	                        {
 								echo "Votre contrat a bien été créer";
 								?>

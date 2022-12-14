@@ -20,7 +20,7 @@
    $chainedeconnexion=connexionbdd();
 
    $resultatinsertion=insertioninscrit($nom_collaborateur, $prenom_collaborateur, $login_collaborateur, $mdp_collaborateur, $cp_collaborateur, $age_collaborateur, $ddn_collaborateur, $telephone_collaborateur, $mail_collaborateur, $chainedeconnexion);
-   if ($resultatinsertion> 0)
+   if ($resultatinsertion>=1)
    		{   echo  " votre inscription a été pris en compte (Vous allez être redirigé)";
 
             echo"<meta http-equiv='refresh' content='5; URL=index.php?id=connexion'>";

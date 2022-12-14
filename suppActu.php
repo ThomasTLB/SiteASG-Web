@@ -7,9 +7,19 @@ include_once("BDDASG.php");
 			<div class="col-xl-9 mx-auto">
 				<div class="cta-inner bg-faded text-center rounded">
                     <?php
-                    $actualiter=$_POST["actualiteChoisi"];
+                    $actualiteChoisi=$_POST["actualiteChoisi"];
                     $chaineconnexion=connexionbdd();
-                    suppActu($actualiter, $chaineconnexion);
+                    $resultatDelete = suppActu($actualiteChoisi, $chaineconnexion);
+					if($resultatDelete>=1)
+					{
+						echo"La suppression est effectuer";
+						echo "<meta http-equiv='refresh' content='3;url=index.php?id=gestionAdmin'>";
+					}
+					else
+					{
+						echo"La suppression à echouer";
+						echo "<meta http-equiv='refresh' content='3;url=index.php?id=gestionAdmin'>";
+					}
                     ?>
                 </div>
 			</div>
